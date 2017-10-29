@@ -53,6 +53,27 @@ public class MergeSorter {
           }
        }
     
+    public static void sort(int[] a) {
+        if ( a.length == 1) {
+            return;
+        }
+        
+        int[] first = new int[a.length /2];
+        int[] second = new int[a.length - first.length];
+        
+        for (int i = 0; i < first.length; i++) {
+            first[i] = a[i];
+        }
+        
+        for (int i = 0; i < second.length; i++) {
+            second[i] = a[first.length + i];
+        }
+        
+        sort(first);
+        sort(second);
+        merge(first,second,a);
+    }
+    
     public static int getCounter() {
         return nr_count;
     }
