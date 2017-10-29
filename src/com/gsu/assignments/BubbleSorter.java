@@ -14,25 +14,25 @@ import java.util.Date;
  */
 public class BubbleSorter {    
     private static void sort(int[] a) {
-        boolean swapped = true;
+        boolean s = true;
       
-        for (int i = a.length - 1; i > 0 && swapped; i--) {
-            swapped = false;
+        for (int i = a.length - 1; i > 0 && s; i--) {
+            s = false;
          
-            for (int j = a.length - 1; j >= a.length - i; j--) {
-                if (a[j] < a[j - 1]) {
-                    swap(j, j - 1, a);
-                    swapped = true;
+            for (int y = a.length - 1; y >= a.length - i; y--) {
+                if (a[y] < a[y - 1]) {
+                    swap(y, y - 1, a);
+                    s = true;
                 }
             }
         }
     }
     
     private static void swap(int i, int j, int[] a) {
-        int temp = a[i];
+        int t = a[i];
       
         a[i] = a[j];
-        a[j] = temp;
+        a[j] = t;
     }
     
     

@@ -21,7 +21,7 @@ public class MergeSortDemo {
        System.out.println ("Example of MergeSortDemo class");
        System.out.println ("+---------------------------------------+");
        
-       for ( int i = 10000; i < 90000; i = i + 10000 ) {
+       for ( int i = 10000; i < 100000; i = i + 10000 ) {
            int[] a = ArrayUtil.randomIntArray(i, i);
            
            MergeSorter.resetCounter();
